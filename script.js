@@ -37,13 +37,14 @@ const people = [
     {name: 'Jill', age: 26},
 ]
 
-const grouping = people.reduce((groupedPeople, indivPerson) => {
+const groups = people.reduce((groupedPeople, indivPerson) => {
     if(groupedPeople[indivPerson.age] == null) {
         groupedPeople[indivPerson.age] = []
         groupedPeople[indivPerson.age].push(indivPerson)}
     return groupedPeople
     }, {})
 
+// This is a sorting function
 // initial value will be an empty object
 // accumulator, which is groupedPeople, started with empty object
 // if(groupedPeople[indivPerson.age] == null) 
